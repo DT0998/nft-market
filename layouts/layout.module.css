@@ -1,0 +1,22 @@
+.menu_left {
+  position: sticky;
+  top: 0px;
+  display: block;
+  height: 100vh;
+}
+
+.header {
+  position: sticky;
+  top: 0px;
+  background-color: #1b1037 !important;
+}
+.content {
+  padding: 2rem 4rem;
+  background-color: #1b1037;
+  color: white;
+}
+@media (max-width: 768px) {
+  .menu_left {
+    display: none;
+  }
+}

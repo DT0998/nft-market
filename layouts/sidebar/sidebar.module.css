@@ -1,0 +1,21 @@
+.sidebar {
+  overflow-y: scroll;
+  background-color: white;
+  border-right: 1px solid rgb(229, 232, 235);
+  border-style: dashed;
+  border-left: none;
+  border-top: none;
+}
+.menu {
+  height: 100vh;
+}
+.logo_container {
+  background-color: #001529;
+}
+.logo {
+  width: 2.5rem;
+  height: 3.75rem;
+  cursor: pointer;
+  margin: 0 auto;
+  padding-top: 1rem;
+}

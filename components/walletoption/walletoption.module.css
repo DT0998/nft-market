@@ -1,0 +1,42 @@
+.btn_wallet,
+.btn_showmore {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid rgb(229, 232, 235);
+  cursor: pointer;
+  border: 1px solid rgb(229, 232, 235);
+}
+.btn_wallet:hover,
+.btn_showmore:hover {
+  transition: all 0.2s ease 0s;
+  box-shadow: rgb(4 17 29 / 25%) 0px 0px 8px 0px;
+  background-color: rgb(251, 253, 255);
+}
+.btn_showmore {
+  justify-content: center;
+}
+.btn_walletfirst {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.btn_walletlast {
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.network {
+  background-color: rgb(32, 129, 226);
+  color: white;
+  border-radius: 10px;
+  padding: 4px 8px;
+}
+.logo {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+.wallet_connect {
+  display: flex;
+  align-items: center;
+}
