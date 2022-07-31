@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@metamask/jazzicon": "^2.0.0",
     "@reduxjs/toolkit": "^1.8.2",
     "antd": "^4.22.2",
     "axios": "^0.26.1",
