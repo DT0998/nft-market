@@ -1,10 +1,11 @@
 import React from "react";
 import { Avatar, Space } from "antd";
 import { useSelector, useDispatch } from "react-redux";
-import classes from "./mywallet.module.css";
+import classes from "./MyWallet.module.css";
 import { UserOutlined, CloseCircleFilled } from "@ant-design/icons";
-import { selectorToggleMenu, toggleMenu } from "../../store/layout/menu/slice";
-import WalletOption from "../walletoption";
+import WalletOption from "../WalletOption";
+// redux
+import { selectorToggleMenu, toggleMenu } from "../../redux/layout/menu/slice";
 
 function MyWallet() {
   const dispath = useDispatch();

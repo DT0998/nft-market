@@ -1,15 +1,18 @@
 import React, { useState } from "react";
-import classes from "./walletoption.module.css";
+import { useRouter } from "next/router";
+import classes from "./WalletOption.module.css";
 import { Row, Col } from "antd";
 import Image from "next/image";
 // icons
 import metamask from "../../assets/images/walletoption/metamask-alternative.png";
 function WalletOption() {
+  const router = useRouter();
   const [account, setAccount] = useState(null);
   const connectMetamask = async () => {
     const accounts = await ethereum.request({ method: "eth_requestAccounts" });
     setAccount(accounts[0]);
     console.log(accounts[0]);
+    router.push("/");
   };
   return (
     <React.Fragment>

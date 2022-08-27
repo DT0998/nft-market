@@ -1,9 +1,9 @@
 import React from "react";
-import { Col, Input, Row } from "antd";
+import { Col, Input, Row, Space } from "antd";
 import { FaWallet } from "react-icons/fa";
 import classes from "./header.module.css";
 import { useDispatch } from "react-redux";
-import { toggleMenu } from "../../store/layout/menu/slice";
+import { toggleMenu } from "../../redux/layout/menu/slice";
 
 const { Search } = Input;
 
@@ -17,11 +17,11 @@ function Header() {
 
   return (
     <React.Fragment>
-      <Row justify="space-between">
+      <Row justify="space-between" align="middle" className={classes.row}>
         <Col className={classes.search}>
           <Search placeholder="Search Collections ...." onSearch={onSearch} />
         </Col>
-        <Col>
+        <Col className={classes.col}>
           <FaWallet onClick={showDrawer} className={classes.wallet} />
         </Col>
       </Row>

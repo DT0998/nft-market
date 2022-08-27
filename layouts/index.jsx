@@ -16,19 +16,18 @@ function LayoutApp(props) {
             collapsible
             collapsed={collapsed}
             onCollapse={(value) => setCollapsed(value)}
+            className={classes.sider}
           >
             <SideBar collapsed={collapsed} />
           </Sider>
         </div>
-        <Layout>
+        <Layout className={classes.menu_right}>
           <Header className={classes.header}>
             <HeaderMenu />
           </Header>
           <MyWallet />
-          <Content style={{ height: "200vh" }} className={classes.content}>
-            {props.children}
-          </Content>
-          <Footer>Footer</Footer>
+          <Content className={classes.content}>{props.children}</Content>
+          <Footer className={classes.footer}>Footer</Footer>
         </Layout>
       </Layout>
     </React.Fragment>

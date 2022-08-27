@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
 import classes from "./sidebar.module.css";
 import Link from "next/link";
-import {Space,Menu } from "antd";
+import { Space, Menu } from "antd";
 // icons
 import Image from "next/image";
 import logo from "../../assets/images/logo.png";
@@ -13,24 +13,20 @@ import {
 } from "react-icons/md";
 import { BsCardImage } from "react-icons/bs";
 
-function SideBar({ collapsed }, ref) {
+function SideBar(props, ref) {
+  const { collapsed } = props;
   return (
     <React.Fragment>
       <div className={classes.sidebar}>
-        {/* logo */}
-        <div className={classes.logo_container}>
-          <div className={classes.logo}>
-            <Image src={logo} alt="logo" />
+        <Menu mode="inline" defaultSelectedKeys="home" theme="dark">
+          {/* logo */}
+          <div className={classes.logo_container}>
+            <div className={classes.logo}>
+              <Image src={logo} alt="logo" />
+            </div>
           </div>
-        </div>
-        <Menu
-          mode="inline"
-          defaultSelectedKeys={["home"]}
-          className={classes.menu}
-          theme="dark"
-        >
           {/* home */}
-          <Menu.Item key="home" ref={ref}>
+          <Menu.Item eventKey="home" ref={ref}>
             <Link href="/" passHref>
               <a>
                 <Space size="middle">

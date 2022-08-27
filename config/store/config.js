@@ -1,5 +1,5 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import storage from "redux-persist/lib/storage";
+import storage from "./storage";
 import {
   FLUSH,
   PAUSE,
@@ -10,7 +10,7 @@ import {
   persistReducer,
   persistStore,
 } from "redux-persist";
-import layoutReducer from '../../store/layout/slice';
+import layoutReducer from "../../redux/layout/slice";
 // root config persist
 const persistConfig = {
   key: "root",
@@ -21,7 +21,7 @@ const persistConfig = {
 // reducer toolkit
 // add more reducers
 const reducer = combineReducers({
-  layout:layoutReducer
+  layout: layoutReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, reducer);

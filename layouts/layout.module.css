@@ -4,19 +4,35 @@
   display: block;
   height: 100vh;
 }
-
+.menu_right {
+  height: 100vh;
+}
 .header {
   position: sticky;
   top: 0px;
-  background-color: #1b1037 !important;
+  background-color: #1b1037;
+  padding: 0 20px;
+  display: flex;
+  flex: 0 1 auto;
+}
+.sider {
+  padding: 0;
+  height: 100vh;
 }
 .content {
   padding: 2rem 4rem;
   background-color: #1b1037;
   color: white;
+  flex: 1 1 auto;
+}
+.footer {
+  flex: 0 1 1rem;
 }
 @media (max-width: 768px) {
   .menu_left {
     display: none;
+  }
+  .header {
+    padding: 0 10px;
   }
 }

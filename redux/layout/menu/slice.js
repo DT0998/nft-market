@@ -1,5 +1,5 @@
 import { createAction, createSlice } from "@reduxjs/toolkit";
-import storage from "redux-persist/lib/storage";
+import storage from "../../../config/store/storage";
 import { persistReducer } from "redux-persist";
 // action toggleMenu
 export const toggleMenu = createAction("menu/toggleMenu");

@@ -1,13 +1,9 @@
 .sidebar {
   overflow-y: scroll;
   background-color: white;
-  border-right: 1px solid rgb(229, 232, 235);
-  border-style: dashed;
   border-left: none;
   border-top: none;
-}
-.menu {
-  height: 100vh;
+  border-bottom: none;
 }
 .logo_container {
   background-color: #001529;
