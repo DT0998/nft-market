@@ -3,7 +3,7 @@ import { Col, Input, Row, Space } from "antd";
 import { FaWallet } from "react-icons/fa";
 import classes from "./header.module.css";
 import { useDispatch } from "react-redux";
-import { toggleMenu } from "../../redux/layout/menu/slice";
+import { toggleMenu } from "../../redux/layout/Menu/slice";
 
 const { Search } = Input;
 

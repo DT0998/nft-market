@@ -37,7 +37,7 @@ function SideBar(props, ref) {
             </Link>
           </Menu.Item>
           {/* dashboard */}
-          <Menu.Item key="dashboard" ref={ref}>
+          <Menu.Item eventKey="dashboard" ref={ref}>
             <Link href="/dashboard" passHref>
               <a>
                 <Space size="middle">
@@ -48,7 +48,7 @@ function SideBar(props, ref) {
             </Link>
           </Menu.Item>
           {/* explore */}
-          <Menu.Item key="explore" ref={ref}>
+          <Menu.Item eventKey="explore" ref={ref}>
             <Link href="/explore" passHref>
               <a>
                 <Space size="middle">
@@ -59,7 +59,7 @@ function SideBar(props, ref) {
             </Link>
           </Menu.Item>
           {/* stats */}
-          <Menu.Item key="stats" ref={ref}>
+          <Menu.Item eventKey="stats" ref={ref}>
             <Link href="/stats" passHref>
               <a>
                 <Space size="middle">
@@ -70,7 +70,7 @@ function SideBar(props, ref) {
             </Link>
           </Menu.Item>
           {/* create */}
-          <Menu.Item key="create" ref={ref}>
+          <Menu.Item eventKey="create" ref={ref}>
             <Link href="/create" passHref>
               <a>
                 <Space size="middle">

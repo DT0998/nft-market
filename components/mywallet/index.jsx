@@ -2,17 +2,23 @@ import React from "react";
 import { Avatar, Space } from "antd";
 import { useSelector, useDispatch } from "react-redux";
 import classes from "./MyWallet.module.css";
-import { UserOutlined, CloseCircleFilled } from "@ant-design/icons";
+import { UserOutlined } from "@ant-design/icons";
 import WalletOption from "../WalletOption";
 // redux
-import { selectorToggleMenu, toggleMenu } from "../../redux/layout/menu/slice";
+import { selectorToggleMenu, toggleMenu } from "../../redux/layout/Menu/slice";
+import { selectorAccounts } from "../../redux/layout/MyWallet/slice";
 
 function MyWallet() {
-  const dispath = useDispatch();
+  const dispatch = useDispatch();
   const visible = useSelector(selectorToggleMenu);
+  const accountAddress = useSelector(selectorAccounts);
+  // close menu
   const onClose = () => {
-    dispath(toggleMenu());
+    dispatch(toggleMenu());
   };
+  // short account address
+  const shortAddress =
+    accountAddress.slice(0, 6) + "..." + accountAddress.slice(-4);
   return (
     <React.Fragment>
       <aside
@@ -25,9 +31,7 @@ function MyWallet() {
                 <Avatar size={30} icon={<UserOutlined />} />
                 <span>My wallet</span>
               </Space>
-              <div onClick={onClose}>
-                <CloseCircleFilled className={classes.close} />
-              </div>
+              {accountAddress && <div>{shortAddress}</div>}
             </div>
             <div className={classes.mywallet_space}>
               <Space direction="vertical">

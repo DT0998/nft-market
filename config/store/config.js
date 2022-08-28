@@ -11,6 +11,10 @@ import {
   persistStore,
 } from "redux-persist";
 import layoutReducer from "../../redux/layout/slice";
+import featureReducer from "../../redux/feature/slice";
+// config nextjs redux wrapper
+import { createWrapper } from "next-redux-wrapper";
+
 // root config persist
 const persistConfig = {
   key: "root",
@@ -22,18 +26,22 @@ const persistConfig = {
 // add more reducers
 const reducer = combineReducers({
   layout: layoutReducer,
+  feature: featureReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, reducer);
-const store = configureStore({
-  reducer: persistedReducer,
-  middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware({
-      serializableCheck: {
-        ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-      },
-    }),
-});
-const persistor = persistStore(store);
+
+const store = () =>
+  configureStore({
+    reducer: persistedReducer,
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware({
+        serializableCheck: {
+          ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
+        },
+      }),
+  });
+
+const persistor = persistStore(store());
 export { persistor };
-export default store;
+export const wrapper = createWrapper(store);

@@ -1,19 +1,17 @@
-import React, { useState } from "react";
-import { useRouter } from "next/router";
+import React from "react";
 import classes from "./WalletOption.module.css";
 import { Row, Col } from "antd";
 import Image from "next/image";
 // icons
 import metamask from "../../assets/images/walletoption/metamask-alternative.png";
+import { useSelector, useDispatch } from "react-redux";
+import { loginMetamask } from "../../redux/layout/MyWallet/slice";
 function WalletOption() {
-  const router = useRouter();
-  const [account, setAccount] = useState(null);
-  const connectMetamask = async () => {
-    const accounts = await ethereum.request({ method: "eth_requestAccounts" });
-    setAccount(accounts[0]);
-    console.log(accounts[0]);
-    router.push("/");
+  const dispatch = useDispatch();
+  const connectMetamask = () => {
+    dispatch(loginMetamask());
   };
+
   return (
     <React.Fragment>
       <Row align="middle">
