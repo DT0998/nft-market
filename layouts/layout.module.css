@@ -20,19 +20,25 @@
   height: 100vh;
 }
 .content {
-  padding: 2rem 4rem;
+  padding: 2rem 2rem;
   background-color: #1b1037;
   color: white;
   flex: 1 1 auto;
 }
 .footer {
+  padding: 0;
+  background-color: #1b1037;
   flex: 0 1 1rem;
 }
 @media (max-width: 768px) {
   .menu_left {
-    display: none;
+    position: fixed;
+    z-index: 10;
   }
   .header {
     padding: 0 10px;
+  }
+  .content {
+    padding: 1rem 1rem;
   }
 }

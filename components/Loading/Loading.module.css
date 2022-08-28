@@ -25,11 +25,11 @@
 @keyframes filling {
   0%,
   90% {
-    fill: #bac736;
+    fill: rgb(29, 228, 29);
     fill-opacity: 0;
   }
   100% {
-    fill: #bac736;
+    fill: rgb(29, 228, 29);
     fill-opacity: 1;
   }
 }

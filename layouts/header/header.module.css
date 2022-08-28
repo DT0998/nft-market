@@ -1,14 +1,26 @@
-.search{
-    display: flex;
-    align-items: center;
+.search {
+  display: flex;
+  align-items: center;
 }
-.wallet{
-    color: antiquewhite;
-    font-size: 1.5rem;
+.wallet {
+  color: antiquewhite;
+  font-size: 1.5rem;
 }
-.col{
-    display: flex;
+.col {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
-.row{
-    width: 100%;
+.row {
+  width: 100%;
+}
+.trigger {
+  font-size: 18px;
+  line-height: 64px;
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s;
+}
+.trigger:hover {
+  color: #4ba4f7;
 }
